@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Дизайн 1-комнатной квартиры 34,3 м² в стиле минимализм для молодого человека. Проект с использованием дерева, множеством мест хранения и атмосферным светом." />
+  <title>Роман Земсков | Гостиная</title>
+  <link rel="shortcut icon" href="../../images/logo.webp" type="image/x-icon" />
+  <script src="https://kit.fontawesome.com/5b3aaeb1ad.js" crossorigin="anonymous" defer></script>
+  <link rel="stylesheet" href="../../styles.css?v=2.1" />
+</head>
+
+<body>
+  <header class="header-scroll">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="На главную">
+        <span class="brand-logo" aria-hidden>RZ</span>
+        <span class="brand-name">Роман Земсков</span>
+        <span class="brand-sub">Дизайн интерьеров</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Меню">
+        <ul>
+          <li><a href="/#about">Обо мне</a></li>
+          <li><a href="/#skills">Навыки</a></li>
+          <li><a href="/#portfolio">Портфолио</a></li>
+          <li><a href="/#services">Услуги</a></li>
+          <li><a href="/#reviews">Отзывы</a></li>
+          <li><a href="/#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <nav class="burger-nav">
+        <input type="checkbox" id="burger-checkbox" class="burger-checkbox" />
+        <label for="burger-checkbox" class="burger"></label>
+        <div class="overlay"></div>
+        <ul class="menu-list">
+          <li>
+            <a href="/#about" class="menu-item">Обо мне</a>
+            <a href="/#skills" class="menu-item">Навыки</a>
+            <a href="/#portfolio" class="menu-item">Портфолио</a>
+            <a href="/#services" class="menu-item">Услуги</a>
+            <a href="/#reviews" class="menu-item">Отзывы</a>
+            <a href="/#contacts" class="menu-item">Контакты</a>
+          </li>
+          <li class="burger-social-networks">
+            <a href="https://www.instagram.com/roma_designer15" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://t.me/roma_designer15" target="_blank">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://vk.com/roma_designer15" target="_blank">
+              <i class="fab fa-vk"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="project-page">
+    <section class="project-hero">
+      <img src="../../images/projects/real5/1.webp" alt="Главное фото проекта" />
+      <div class="project-hero-info">
+        <div class="project-hero-left">
+          <h1>Гостиная</h1>
+          <div class="project-area">Площадь: 40 м<sup>2</sup></div>
+        </div>
+        <div class="project-hero-right">
+          <div class="project-year">2025</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content">
+      <div class="project-description">
+        <h2>О проекте</h2>
+        <p>
+          Интерьер выполнен в неоклассике в светлых тонах.
+          Нужно было обновить меблировку и обыграть арочные проемы.
+        </p>
+      </div>
+
+      <div class="project-gallery">
+        <img src="../../images/projects/real5/1.webp" alt="Фото проекта 1" loading="lazy" />
+        <img src="../../images/projects/real5/2.webp" alt="Фото проекта 2" loading="lazy" />
+        <img src="../../images/projects/real5/3.webp" alt="Фото проекта 3" loading="lazy" />
+      </div>
+
+      <div class="container" style="text-align: center; margin-block: 40px">
+        <a class="button-outline" href="/real-projects">
+          <i class="fa-solid fa-arrow-left"></i> Назад к проектам
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div id="galleryModal" class="gallery-modal">
+    <span class="gallery-modal-close" aria-label="Закрыть окно">&times;</span>
+    <div class="gallery-modal-container">
+      <img class="gallery-modal-content" id="galleryModalImage" />
+      <a class="gallery-modal-prev">&#10094;</a>
+      <a class="gallery-modal-next">&#10095;</a>
+    </div>
+    <div class="gallery-modal-dots" id="galleryModalDots"></div>
+  </div>
+
+  <footer class="container footer-inner">
+    <p>
+      &copy; <span id="year"></span>
+      Роман Земсков | Developed by
+      <a href="https://zemskovik.github.io" target="_blank">ZemskovIK</a>
+    </p>
+  </footer>
+
+  <script type="module" src="../../scripts/main.js?v=2.0"></script>
+
+</body>
+
+</html>
