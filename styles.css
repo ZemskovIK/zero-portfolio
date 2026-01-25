@@ -2100,6 +2100,7 @@ body.menu-open {
 
   .service-icon i {
     font-size: 1.8rem;
+    margin-block: 12px;
   }
 
   .review-content {
