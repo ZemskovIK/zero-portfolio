@@ -1434,12 +1434,14 @@ body.menu-open {
 }
 
 .footer-inner a {
-  color: var(--main-text);
+  color: var(--secondary-bg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
   transition: color 0.3s ease;
 }
 
 .footer-inner a:hover {
-  color: var(--secondary-bg);
+  color: var(--main-text);
 }
 
 /* 404 Page */
