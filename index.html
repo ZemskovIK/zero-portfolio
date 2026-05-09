@@ -295,6 +295,13 @@
           </div>
           <textarea id="reviewContent" name="content" placeholder="Текст вашего отзыва..." style="resize: none"
             required></textarea>
+          <label class="consent-label">
+            <input type="checkbox" name="consent" id="reviewConsent" required />
+            <span>
+              Я даю согласие на обработку персональных данных в соответствии с
+              <a href="/privacy-policy">политикой конфиденциальности</a>
+            </span>
+          </label>
           <div style="text-align: center">
             <button type="submit" id="reviewSubmit">Отправить отзыв</button>
           </div>
@@ -334,6 +341,13 @@
           <input type="text" name="name" placeholder="Ваше имя" required />
           <input type="email" name="email" placeholder="Email" required />
           <textarea name="message" placeholder="Сообщение" style="resize: none" required></textarea>
+          <label class="consent-label">
+            <input type="checkbox" name="consent" id="contactConsent" required />
+            <span>
+              Я даю согласие на обработку персональных данных в соответствии с
+              <a href="/privacy-policy">политикой конфиденциальности</a>
+            </span>
+          </label>
           <button type="submit">Отправить</button>
           <div id="contactFormStatus" class="form-status"></div>
         </form>
@@ -346,6 +360,9 @@
       &copy; <span id="year"></span>
       Роман Земсков | Developed by
       <a href="https://zemskovik.github.io" target="_blank">ZemskovIK</a>
+    </p>
+    <p class="footer-privacy">
+      <a href="/privacy-policy">Политика конфиденциальности</a>
     </p>
   </footer>
 

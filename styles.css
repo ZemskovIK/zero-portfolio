@@ -2191,3 +2191,127 @@ body.menu-open {
     scroll-behavior: auto !important;
   }
 }
+
+/* Consent checkbox */
+.consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--secondary-text);
+  margin-bottom: 1rem;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.consent-label input[type='checkbox'] {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--secondary-bg);
+  cursor: pointer;
+}
+
+.consent-label a {
+  color: var(--secondary-bg);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.consent-label a:hover {
+  color: var(--main-text);
+}
+
+/* Footer privacy link */
+.footer-privacy {
+  margin-top: 4px;
+  font-size: 0.85rem;
+}
+
+/* Privacy Policy Page */
+.privacy-wrapper {
+  padding: 3rem 1.5rem;
+}
+
+.privacy-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  padding: 3rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.privacy-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  color: var(--main-text);
+  margin-bottom: 0.4rem;
+}
+
+.privacy-updated {
+  font-size: 0.9rem;
+  color: var(--secondary-text);
+  margin-bottom: 2rem;
+}
+
+.privacy-section {
+  margin-bottom: 2rem;
+  color: var(--main-text);
+}
+
+.privacy-section h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--main-text);
+}
+
+.privacy-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.privacy-section p {
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.privacy-section ul {
+  padding-left: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.privacy-section li {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  line-height: 1.6;
+}
+
+.privacy-section a {
+  color: var(--secondary-bg);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.privacy-section a:hover {
+  color: var(--main-text);
+}
+
+.privacy-back {
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 600px) {
+  .privacy-card {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .privacy-title {
+    font-size: 1.4rem;
+  }
+}
