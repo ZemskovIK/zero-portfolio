@@ -49,7 +49,7 @@ function initSupabase() {
       }
 
       supabaseClient = createClient(config.SUPABASE_URL, config.SUPABASE_ANON_KEY);
-      console.log('Supabase успешно инициализирован для проекта:', config.SUPABASE_URL);
+      console.log('Supabase успешно инициализирован');
 
       resolve(supabaseClient);
 
@@ -84,8 +84,6 @@ window.submitReview = async (reviewData) => {
     if (!['m', 'f'].includes(reviewData.gender)) {
       return { success: false, error: 'Выберите пол' };
     }
-
-    console.log('Отправка отзыва с кодом:', cleanCode);
 
     const { data, error } = await supabase.rpc(
       'submit_review_with_code_check',
@@ -146,7 +144,6 @@ window.fetchAllReviews = async () => {
       return [];
     }
 
-    console.log('Загружено отзывов:', data?.length || 0);
     return data || [];
 
   } catch (error) {
@@ -157,15 +154,11 @@ window.fetchAllReviews = async () => {
 
 // Инициализация при загрузке страницы
 (function autoInit() {
-  console.log('Начало инициализации Supabase...');
-
   // Ждём немного перед инициализацией
   setTimeout(async () => {
     try {
       await initSupabase();
-      console.log('Supabase автоматически инициализирован');
     } catch (error) {
-      console.warn('Автоматическая инициализация Supabase не удалась:', error.message);
     }
   }, 1000);
 })();
