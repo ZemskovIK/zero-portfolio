@@ -154,11 +154,5 @@ window.fetchAllReviews = async () => {
 
 // Инициализация при загрузке страницы
 (function autoInit() {
-  // Ждём немного перед инициализацией
-  setTimeout(async () => {
-    try {
-      await initSupabase();
-    } catch (error) {
-    }
-  }, 1000);
+  initSupabase().catch(() => {});
 })();

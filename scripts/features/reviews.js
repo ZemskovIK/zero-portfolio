@@ -151,12 +151,6 @@ export async function initReviewsSection() {
     </div>
   `
 
-  // Ждём инициализацию Supabase
-  if (typeof window.fetchAllReviews !== 'function') {
-    setTimeout(initReviewsSection, 1000)
-    return
-  }
-
   try {
     const reviews = await window.fetchAllReviews()
     targetContainer.innerHTML = ''
@@ -253,10 +247,8 @@ export function initReviewForm() {
 }
 
 export function initReviewsUI() {
-  setTimeout(() => {
-    initReviewsSection()
-    initReviewForm()
-  }, 1500)
+  initReviewsSection()
+  initReviewForm()
 
   // Обновляем индикаторы при ресайзе
   window.addEventListener('resize', () => {
