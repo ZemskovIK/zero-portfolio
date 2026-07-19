@@ -369,8 +369,8 @@ body.menu-open {
 }
 
 .profile-image {
-  width: 350px;
   height: 350px;
+  width: auto;
   object-fit: contain;
   border: 7px solid white;
   border-radius: 20px;
