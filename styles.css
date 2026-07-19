@@ -1624,7 +1624,7 @@ body.menu-open {
   }
 
   .profile-image {
-    width: 340px;
+    width: auto;
     height: 340px;
   }
 }
@@ -1644,7 +1644,7 @@ body.menu-open {
   }
 
   .profile-image {
-    width: 300px;
+    width: auto;
     height: 300px;
   }
 
@@ -1709,7 +1709,7 @@ body.menu-open {
   }
 
   .profile-image {
-    width: 280px;
+    width: auto;
     height: 280px;
   }
 
@@ -1757,7 +1757,7 @@ body.menu-open {
   }
 
   .profile-image {
-    width: 260px;
+    width: auto;
     height: 260px;
   }
 
@@ -1817,7 +1817,7 @@ body.menu-open {
   }
 
   .profile-image {
-    width: 240px;
+    width: auto;
     height: 240px;
     border-width: 5px;
   }
@@ -2088,7 +2088,7 @@ body.menu-open {
   }
 
   .profile-image {
-    width: 220px;
+    width: auto;
     height: 220px;
   }
 
@@ -2152,7 +2152,7 @@ body.menu-open {
   }
 
   .profile-image {
-    width: 160px;
+    width: auto;
     height: 160px;
   }
 
