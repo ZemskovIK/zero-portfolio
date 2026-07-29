@@ -369,7 +369,7 @@ body.menu-open {
 }
 
 .profile-image {
-  height: 350px;
+  height: 400px;
   width: auto;
   object-fit: contain;
   border: 7px solid white;
@@ -1625,7 +1625,7 @@ body.menu-open {
 
   .profile-image {
     width: auto;
-    height: 340px;
+    height: 380px;
   }
 }
 
@@ -1645,7 +1645,7 @@ body.menu-open {
 
   .profile-image {
     width: auto;
-    height: 300px;
+    height: 340px;
   }
 
   .about-details {
@@ -1710,7 +1710,7 @@ body.menu-open {
 
   .profile-image {
     width: auto;
-    height: 280px;
+    height: 320px;
   }
 
   .section-title {
@@ -1758,7 +1758,7 @@ body.menu-open {
 
   .profile-image {
     width: auto;
-    height: 260px;
+    height: 300px;
   }
 
   .intro-text {
@@ -1818,7 +1818,7 @@ body.menu-open {
 
   .profile-image {
     width: auto;
-    height: 240px;
+    height: 280px;
     border-width: 5px;
   }
 
@@ -2089,7 +2089,7 @@ body.menu-open {
 
   .profile-image {
     width: auto;
-    height: 220px;
+    height: 250px;
   }
 
   .section-title {
@@ -2153,7 +2153,7 @@ body.menu-open {
 
   .profile-image {
     width: auto;
-    height: 160px;
+    height: 190px;
   }
 
   .service-card {
