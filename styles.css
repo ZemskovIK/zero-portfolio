@@ -219,10 +219,16 @@ body.menu-open {
   font-weight: 500;
   transition: color 0.3s ease;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .menu-item:hover {
   color: var(--secondary-bg);
+}
+
+.menu-item:active,
+.menu-item:focus {
+  background: transparent;
 }
 
 .burger-checkbox {
@@ -833,6 +839,7 @@ body:not(:has(.hero-inner)) main>.section-inner:first-child .section-header {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 400px;
   min-height: 400px;
 }
 
@@ -846,6 +853,7 @@ body:not(:has(.hero-inner)) main>.section-inner:first-child .section-header {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -877,6 +885,7 @@ body:not(:has(.hero-inner)) main>.section-inner:first-child .section-header {
 .review-content {
   margin-bottom: 15px;
   flex-grow: 1;
+  min-height: 0;
   overflow-y: hidden;
   max-height: 180px;
   position: relative;
@@ -885,6 +894,24 @@ body:not(:has(.hero-inner)) main>.section-inner:first-child .section-header {
 
 .review-content.scrollable {
   overflow-y: auto;
+}
+
+.review-content.scrollable::after {
+  content: '';
+  position: sticky;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  height: 42px;
+  margin-top: -42px;
+  background: linear-gradient(transparent, var(--page-bg));
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.review-content.scrollable.scrolled-to-bottom::after {
+  opacity: 0;
 }
 
 .review-content::-webkit-scrollbar {
@@ -1949,6 +1976,7 @@ body:not(:has(.hero-inner)) main>.section-inner:first-child .section-header {
   }
 
   .reviews-inner {
+    height: 430px;
     padding: 0;
   }
 

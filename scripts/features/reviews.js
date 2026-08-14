@@ -9,6 +9,9 @@ function initScrollIndicators() {
 
     if (needsIndicator) {
       content.classList.add('scrollable')
+      content.classList.toggle('scrolled-to-bottom',
+        content.scrollTop + content.clientHeight >= content.scrollHeight - 10
+      )
 
       // Простой индикатор при скролле
       content.addEventListener('scroll', function () {
@@ -18,6 +21,7 @@ function initScrollIndicators() {
       })
     } else {
       content.classList.remove('scrollable')
+      content.classList.remove('scrolled-to-bottom')
     }
   })
 }
