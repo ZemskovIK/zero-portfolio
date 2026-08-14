@@ -49,8 +49,6 @@ function initSupabase() {
       }
 
       supabaseClient = createClient(config.SUPABASE_URL, config.SUPABASE_ANON_KEY);
-      console.log('Supabase успешно инициализирован');
-
       resolve(supabaseClient);
 
     } catch (error) {
@@ -77,26 +75,31 @@ window.submitReview = async (reviewData) => {
       return { success: false, error: 'Введите код' };
     }
 
-    if (reviewData.rating < 1 || reviewData.rating > 5) {
-      return { success: false, error: 'Оценка должна быть от 1 до 5' };
-    }
-
     if (!['m', 'f'].includes(reviewData.gender)) {
       return { success: false, error: 'Выберите пол' };
     }
 
-    const { data, error } = await supabase.rpc(
+    const rpcPayload = {
+      p_code: cleanCode,
+      p_author_name: (reviewData.name || '').trim(),
+      p_content: (reviewData.content || '').trim(),
+      p_gender: reviewData.gender
+    };
+
+    let { data, error } = await supabase.rpc(
       'submit_review_with_code_check',
-      {
-        p_code: cleanCode,
-        p_author_name: (reviewData.name || '').trim(),
-        p_rating: parseInt(reviewData.rating),
-        p_content: (reviewData.content || '').trim(),
-        p_gender: reviewData.gender
-      }
+      rpcPayload
     );
 
-    console.log('Ответ от базы:', data, error);
+    if (error && error.code === 'PGRST202') {
+      ({ data, error } = await supabase.rpc(
+        'submit_review_with_code_check',
+        {
+          ...rpcPayload,
+          p_rating: 5
+        }
+      ));
+    }
 
     if (error) {
       console.error('Ошибка RPC:', error);
@@ -132,12 +135,20 @@ window.fetchAllReviews = async () => {
   try {
     const supabase = await initSupabase();
 
-    console.log('Загрузка отзывов...');
-
-    const { data, error } = await supabase
-      .from('reviews')
-      .select('*')
+    let { data, error } = await supabase
+      .from('public_reviews')
+      .select('author_name, content, gender, created_at')
       .order('created_at', { ascending: false });
+
+    if (error) {
+      const fallback = await supabase
+        .from('reviews')
+        .select('author_name, content, gender, created_at')
+        .order('created_at', { ascending: false });
+
+      data = fallback.data;
+      error = fallback.error;
+    }
 
     if (error) {
       console.error('Ошибка загрузки отзывов:', error);
@@ -154,5 +165,5 @@ window.fetchAllReviews = async () => {
 
 // Инициализация при загрузке страницы
 (function autoInit() {
-  initSupabase().catch(() => {});
+  initSupabase().catch(() => { });
 })();

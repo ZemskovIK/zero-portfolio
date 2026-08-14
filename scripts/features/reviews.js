@@ -105,12 +105,6 @@ export function renderReviewsFromData(reviewsData) {
       day: 'numeric',
     })
 
-    let starsHtml = ''
-    for (let i = 0; i < 5; i++) {
-      starsHtml += `<i class="fas fa-star${i < review.rating ? '' : ' empty'}" 
-                      style="color: ${i < review.rating ? '#FFD700' : '#ddd'}"></i>`
-    }
-
     const name = String(review.author_name || '').trim()
 
     slideDiv.innerHTML = `
@@ -120,7 +114,6 @@ export function renderReviewsFromData(reviewsData) {
         </div>
         <div class="review-author">
           <h3>${name}</h3>
-          <div class="review-rating">${starsHtml}</div>
         </div>
       </div>
       <div class="review-content"><p>"${review.content}"</p></div>
@@ -186,15 +179,15 @@ export function initReviewForm() {
 
     // Собираем данные
     const formData = new FormData(reviewForm)
-    const ratingInput = reviewForm.querySelector('input[name="rating"]:checked')
     const genderInput = reviewForm.querySelector('input[name="gender"]:checked')
+    const consentInput = reviewForm.querySelector('input[name="consent"]')
 
     const errors = []
     if (!formData.get('code')?.trim()) errors.push('Укажите код')
     if (!formData.get('name')?.trim()) errors.push('Укажите имя')
     if (!genderInput) errors.push('Выберите пол')
-    if (!ratingInput) errors.push('Поставьте оценку')
     if (!formData.get('content')?.trim()) errors.push('Введите текст отзыва')
+    if (!consentInput?.checked) errors.push('Подтвердите согласие на обработку персональных данных и распространение отзыва')
 
     if (errors.length) {
       if (statusDiv) {
@@ -216,7 +209,6 @@ export function initReviewForm() {
         code: formData.get('code').trim().toUpperCase(),
         name: formData.get('name').trim(),
         gender: genderInput.value,
-        rating: parseInt(ratingInput.value),
         content: formData.get('content').trim()
       })
 

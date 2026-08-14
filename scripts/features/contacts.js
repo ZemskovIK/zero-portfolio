@@ -9,6 +9,7 @@ export function initContactForm() {
   const nameInput = form.querySelector('input[name="name"]');
   const emailInput = form.querySelector('input[name="email"]');
   const messageInput = form.querySelector('textarea[name="message"]');
+  const consentInput = form.querySelector('input[name="consent"]');
 
   function getEmailJSConfig() {
     if (window.EMAILJS_CONFIG) {
@@ -76,6 +77,7 @@ export function initContactForm() {
     if (!nameVal) errors.push(markError(nameInput, 'Укажите ваше имя'));
     if (!emailVal || !emailOk) errors.push(markError(emailInput, 'Введите корректный email'));
     if (!messageVal) errors.push(markError(messageInput, 'Введите сообщение'));
+    if (!consentInput?.checked) errors.push('Подтвердите согласие на обработку персональных данных');
 
     if (errors.length) {
       if (statusDiv) {
