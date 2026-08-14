@@ -6,6 +6,7 @@ function getSupabaseConfig() {
   if (window.SUPABASE_CONFIG) {
     return window.SUPABASE_CONFIG;
   }
+  return null;
 }
 
 function initSupabase() {
@@ -21,7 +22,6 @@ function initSupabase() {
 
   initPromise = new Promise(async (resolve, reject) => {
     try {
-      // Проверяем, загружена ли библиотека
       if (!window.supabase) {
         const script = document.createElement('script');
         script.src = 'https://unpkg.com/@supabase/supabase-js@2';
@@ -43,8 +43,7 @@ function initSupabase() {
       const { createClient } = window.supabase;
       const config = getSupabaseConfig();
 
-      // Проверяем конфигурацию
-      if (!config.SUPABASE_URL || !config.SUPABASE_ANON_KEY) {
+      if (!config?.SUPABASE_URL || !config?.SUPABASE_ANON_KEY) {
         throw new Error('Не настроены Supabase ключи');
       }
 
@@ -64,12 +63,10 @@ function initSupabase() {
   return initPromise;
 }
 
-// Функция отправки отзыва
 window.submitReview = async (reviewData) => {
   try {
     const supabase = await initSupabase();
 
-    // Базовые проверки
     const cleanCode = (reviewData.code || '').trim().toUpperCase();
     if (!cleanCode) {
       return { success: false, error: 'Введите код' };
@@ -130,7 +127,6 @@ window.submitReview = async (reviewData) => {
   }
 };
 
-// Функция для загрузки всех отзывов
 window.fetchAllReviews = async () => {
   try {
     const supabase = await initSupabase();
@@ -163,7 +159,6 @@ window.fetchAllReviews = async () => {
   }
 };
 
-// Инициализация при загрузке страницы
 (function autoInit() {
   initSupabase().catch(() => { });
 })();

@@ -1,6 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-});
-
 export function initHeaderScroll() {
   const header = document.querySelector('header');
   if (!header) return;

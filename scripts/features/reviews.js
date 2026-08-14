@@ -22,6 +22,14 @@ function initScrollIndicators() {
   })
 }
 
+let resizeTimer = null
+
+function escapeHtml(value) {
+  const div = document.createElement('div')
+  div.textContent = String(value || '')
+  return div.innerHTML
+}
+
 function initReviewsSlider() {
   const slides = document.querySelectorAll('.slide')
   const dotsContainer = document.querySelector('.dots-container')
@@ -105,7 +113,8 @@ export function renderReviewsFromData(reviewsData) {
       day: 'numeric',
     })
 
-    const name = String(review.author_name || '').trim()
+    const name = escapeHtml(String(review.author_name || '').trim())
+    const content = escapeHtml(review.content)
 
     slideDiv.innerHTML = `
       <div class="review-header">
@@ -116,7 +125,7 @@ export function renderReviewsFromData(reviewsData) {
           <h3>${name}</h3>
         </div>
       </div>
-      <div class="review-content"><p>"${review.content}"</p></div>
+      <div class="review-content"><p>"${content}"</p></div>
       <div class="review-date">${reviewDate}</div>
     `
 
@@ -244,7 +253,7 @@ export function initReviewsUI() {
 
   // Обновляем индикаторы при ресайзе
   window.addEventListener('resize', () => {
-    clearTimeout(window.resizeTimeout)
-    window.resizeTimeout = setTimeout(initScrollIndicators, 250)
+    clearTimeout(resizeTimer)
+    resizeTimer = setTimeout(initScrollIndicators, 250)
   })
 }

@@ -63,8 +63,8 @@ export function initContactForm() {
 
     try {
       emailjs.init(emailjsConfig.PUBLIC_KEY);
-    } catch (e) {
-      console.log('EmailJS уже инициализирован');
+    } catch {
+      // EmailJS can throw when it has already been initialized.
     }
 
     clearErrors();
