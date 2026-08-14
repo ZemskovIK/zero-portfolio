@@ -10,7 +10,7 @@
     content="Создаю интерьеры, которые будут вашим самым уютным и любимым местом времяпрепровождения. Они будут полностью отражать вас, как зеркало. Визуализации интерьеров и стендов." />
   <title>Роман Земсков — Дизайнер интерьера</title>
   <link rel="shortcut icon" href="/images/logo.webp" type="image/x-icon" />
-  <link rel="stylesheet" href="styles.css?v=2.1" />
+  <link rel="stylesheet" href="styles.css?v=2.2" />
   <script src="https://kit.fontawesome.com/5b3aaeb1ad.js" crossorigin="anonymous" defer></script>
 </head>
 
@@ -18,7 +18,7 @@
   <header class="header-scroll">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="На главную">
-        <span class="brand-logo" aria-hidden>RZ</span>
+        <img class="brand-logo" src="/images/logo.svg" alt="" aria-hidden="true" />
         <span class="brand-name">Роман Земсков</span>
         <span class="brand-sub">Дизайн интерьеров</span>
       </a>
@@ -50,6 +50,7 @@
           <li class="burger-social-networks">
             <a href="https://www.instagram.com/roma_designer15" target="_blank">
               <i class="fab fa-instagram"></i>
+              <span class="meta-mark" aria-hidden="true">*</span>
             </a>
             <a href="https://t.me/roma_designer15" target="_blank">
               <i class="fab fa-telegram"></i>
@@ -69,7 +70,7 @@
         <div class="hero-content">
           <h1 class="hero-title">Интерьер - зеркало, <br />отражающее вас</h1>
           <p class="hero-subtitle">
-            Создаю и визуализирую уникальные пространства, сочетающие
+            Создаю и проектирую уникальные пространства, сочетающие
             функциональность и эстетику
           </p>
           <a href="#portfolio" class="hero-button">Посмотреть работы</a>
@@ -94,7 +95,7 @@
             красивая картинка, картинка, а многогранный и сложный процесс
             создания пространства для жизни и отдыха, которое будет приносить
             удовольствие от нахождения в нем. Правильно подобранные материалы,
-            фактуры и цвета; грамотная планировка и функциональная мебель;
+            фактуры и цвета, грамотная планировка и функциональная мебель,
             подходящий стиль и атмосфера - это все создает интерьер мечты
           </p>
         </div>
@@ -105,7 +106,7 @@
             <ul class="card-list">
               <li>РГУ им. А. Н. Косыгина, "Дизайн среды" (2023 - н.в.)</li>
               <li>
-                7 лет академии акварели и изящных искусств Сергея Андрияки
+                7 лет Академии акварели и изящных искусств Сергея Андрияки
               </li>
             </ul>
           </div>
@@ -178,29 +179,29 @@
         <div class="project-group">
           <div class="projects">
             <img src="/images/projects/study.webp" alt=" study projects" loading="lazy" />
-            <p class="project-title">Учебные проекты</p>
             <a href="/study-projects" class="page-link">
               <div class="link-text">Перейти в раздел</div>
             </a>
           </div>
+          <p class="project-title">Учебные проекты</p>
         </div>
         <div class="project-group">
           <div class="projects">
             <img src="/images/projects/real.webp" alt="real projects" loading="lazy" />
-            <p class="project-title">Реальные проекты</p>
             <a href="/real-projects" class="page-link">
               <div class="link-text">Перейти в раздел</div>
             </a>
           </div>
+          <p class="project-title">Реальные проекты</p>
         </div>
         <div class="project-group">
           <div class="projects">
             <img src="/images/projects/own.webp" alt="ideas" loading="lazy" />
-            <p class="project-title">Мои наработки</p>
             <a href="/ideas" class="page-link">
               <div class="link-text">Перейти в раздел</div>
             </a>
           </div>
+          <p class="project-title">Мои наработки</p>
         </div>
       </div>
     </section>
@@ -211,48 +212,192 @@
         <div class="section-divider"></div>
       </div>
       <div class="container services-inner">
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-cube"></i>
+        <article class="service-item">
+          <div class="service-number">01</div>
+          <div class="service-content">
+            <button class="service-summary" type="button" aria-expanded="false">
+              <div class="service-main">
+                <h3>3D-визуализация</h3>
+                <p>
+                  Создание фотореалистичных картинок по вашему ТЗ.
+                </p>
+              </div>
+              <span class="service-price">600 <small>₽/м²</small></span>
+              <span class="service-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="service-steps" hidden>
+              <div class="service-step">
+                <span>1</span>
+                <div>
+                  <p>
+                    Обсуждение ТЗ и всех нюансов проекта.
+                  </p>
+                </div>
+              </div>
+              <div class="service-step">
+                <span>2</span>
+                <div>
+                  <p>
+                    Моделирование в программе.
+                  </p>
+                </div>
+              </div>
+              <div class="service-step">
+                <span>3</span>
+                <div>
+                  <p>
+                    Подготовка финальных ракурсов.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <h3>Дизайн / 3D визуализация</h3>
-          <p>500 руб кв/м (интерьеры, стенды)</p>
-          <div class="service-hover">
-            <p>
-              Подготовка дизайнерской концепции;
-              создание фотореалистичных визуализаций по вашему ТЗ или моим предложениям
-            </p>
+        </article>
+
+        <article class="service-item">
+          <div class="service-number">02</div>
+          <div class="service-content">
+            <button class="service-summary" type="button" aria-expanded="false">
+              <div class="service-main">
+                <h3>Дизайн + 3D-визуализация</h3>
+                <p>
+                  Создание концепции интерьера, планировочного решения и фотореалистичных ракурсов.
+                </p>
+              </div>
+              <span class="service-price">1000 <small>₽/м²</small></span>
+              <span class="service-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="service-steps" hidden>
+              <div class="service-step">
+                <span>1</span>
+                <div>
+                  <p>
+                    Создание концепции интерьера.
+                  </p>
+                </div>
+              </div>
+              <div class="service-step">
+                <span>2</span>
+                <div>
+                  <p>
+                    Подготовка вариантов планировочного решения и зонирования пространства.
+                  </p>
+                </div>
+              </div>
+              <div class="service-step">
+                <span>3</span>
+                <div>
+                  <p>
+                    Моделирование в программе.
+                  </p>
+                </div>
+              </div>
+              <div class="service-step">
+                <span>4</span>
+                <div>
+                  <p>
+                    Подготовка финальных ракурсов.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-ruler-combined"></i>
+        </article>
+
+        <article class="service-item">
+          <div class="service-number">03</div>
+          <div class="service-content">
+            <button class="service-summary" type="button" aria-expanded="false">
+              <div class="service-main">
+                <h3>Планировочное решение</h3>
+                <p>
+                  Разработка эргономичной планировки с учетом ваших пожеланий.
+                </p>
+              </div>
+              <span class="service-price">500 <small>₽/м²</small></span>
+              <span class="service-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="service-steps" hidden>
+              <div class="service-step">
+                <span>1</span>
+                <div>
+                  <p>
+                    Разработка эргономичной планировки с учетом ваших пожеланий.
+                  </p>
+                </div>
+              </div>
+              <div class="service-step">
+                <span>2</span>
+                <div>
+                  <p>
+                    Подготовка вариантов планировочного решения и зонирования пространства.
+                  </p>
+                </div>
+              </div>
+              <div class="service-step">
+                <span>3</span>
+                <div>
+                  <p>
+                    Включает планы: обмерный, демонтаж и монтаж при необходимости, расстановка мебели и оборудования.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <h3>Планировочное решение</h3>
-          <p>300 руб кв/м</p>
-          <div class="service-hover">
-            <p>
-              Варианты эргономичной и удобной расстановки мебели и
-              оборудования
-            </p>
+        </article>
+
+        <article class="service-item">
+          <div class="service-number">04</div>
+          <div class="service-content">
+            <button class="service-summary" type="button" aria-expanded="false">
+              <div class="service-main">
+                <h3>Комплектация объекта</h3>
+                <p>
+                  Подбор предметного наполнения интерьера, смет и спецификаций.
+                </p>
+              </div>
+              <span class="service-price">500 <small>₽/м²</small></span>
+              <span class="service-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="service-steps" hidden>
+              <div class="service-step">
+                <span>1</span>
+                <div>
+                  <p>
+                    Подбор предметного наполнения интерьера: мебель, материалы, колористическое решение, освещение,
+                    декор.
+                  </p>
+                </div>
+              </div>
+              <div class="service-step">
+                <span>2</span>
+                <div>
+                  <p>
+                    Создание мудбордов/коллажей по стилистике и атмосфере интерьера.
+                  </p>
+                </div>
+              </div>
+              <div class="service-step">
+                <span>3</span>
+                <div>
+                  <p>
+                    Составление смет и спецификаций.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-circle-check"></i>
-          </div>
-          <h3>Подбор материалов и мебели</h3>
-          <p>от 1000 руб</p>
-          <div class="service-hover">
-            <p>Комплектация вашего интерьера в нужной стилистике и атмосфере</p>
-          </div>
-        </div>
+        </article>
       </div>
     </section>
 
     <section id="reviews" class="section-inner">
-      <div class="section-header">
+      <div class="section-header reviews-header">
         <h2 class="section-title">Отзывы клиентов</h2>
+        <div class="reviews-mobile-arrows" aria-label="Навигация по отзывам">
+          <button type="button" onclick="changeSlide(-1)" aria-label="Предыдущий отзыв">&#10094;</button>
+          <button type="button" onclick="changeSlide(1)" aria-label="Следующий отзыв">&#10095;</button>
+        </div>
         <div class="section-divider"></div>
       </div>
       <div class="slideshow-container">
@@ -280,30 +425,15 @@
             <input type="radio" name="gender" id="gender-female" value="f" required />
             <label for="gender-female" class="gender-label">Женский</label>
           </div>
-          <label class="text-form">Ваша оценка:</label>
-          <div class="rating-stars">
-            <input type="radio" name="rating" id="star1" value="5" />
-            <label for="star1" class="star-label">★</label>
-
-            <input type="radio" name="rating" id="star2" value="4" />
-            <label for="star2" class="star-label">★</label>
-
-            <input type="radio" name="rating" id="star3" value="3" />
-            <label for="star3" class="star-label">★</label>
-
-            <input type="radio" name="rating" id="star4" value="2" />
-            <label for="star4" class="star-label">★</label>
-
-            <input type="radio" name="rating" id="star5" value="1" />
-            <label for="star5" class="star-label">★</label>
-          </div>
           <textarea id="reviewContent" name="content" placeholder="Текст вашего отзыва..." style="resize: none"
             required></textarea>
           <label class="consent-label">
             <input type="checkbox" name="consent" id="reviewConsent" required />
             <span>
-              Я даю согласие на обработку персональных данных в соответствии с
-              <a href="/privacy-policy">политикой конфиденциальности</a>
+              Я даю
+              <a href="/personal-data-consent">согласие на обработку персональных данных</a>
+              и
+              <a href="/review-publication-consent">согласие на распространение отзыва</a>
             </span>
           </label>
           <div style="text-align: center">
@@ -330,6 +460,7 @@
             <div class="social-links">
               <a href="https://www.instagram.com/roma_designer15" target="_blank">
                 <i class="fab fa-instagram"></i>
+                <span class="meta-mark" aria-hidden="true">*</span>
               </a>
               <a href="https://t.me/roma_designer15" target="_blank">
                 <i class="fab fa-telegram"></i>
@@ -348,8 +479,8 @@
           <label class="consent-label">
             <input type="checkbox" name="consent" id="contactConsent" required />
             <span>
-              Я даю согласие на обработку персональных данных в соответствии с
-              <a href="/privacy-policy">политикой конфиденциальности</a>
+              Я даю
+              <a href="/personal-data-consent">согласие на обработку персональных данных</a>
             </span>
           </label>
           <button type="submit">Отправить</button>
@@ -367,12 +498,19 @@
     </p>
     <p class="footer-privacy">
       <a href="/privacy-policy">Политика конфиденциальности</a>
+      |
+      <a href="/personal-data-consent">Согласие на обработку персональных данных</a>
+      |
+      <a href="/review-publication-consent">Согласие на распространение отзыва</a>
+    </p>
+    <p class="footer-note">
+      *Meta Platforms Inc. признана экстремистской, её деятельность запрещена на территории РФ
     </p>
   </footer>
 
-  <script src="./config.js"></script>
-  <script src="./scripts/supabase.js"></script>
-  <script type="module" src="./scripts/main.js?v=2.0"></script>
+  <script src="./config.js?v=2.1"></script>
+  <script src="./scripts/supabase.js?v=2.1"></script>
+  <script type="module" src="./scripts/main.js?v=2.1"></script>
   <script>
     setTimeout(function () {
       var script = document.createElement('script')
