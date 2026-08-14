@@ -828,18 +828,6 @@ body.menu-open {
   border-radius: 2px;
 }
 
-.review-indicator-container {
-  position: relative;
-  width: 100%;
-  margin-top: 5px;
-  height: 30px;
-  display: none;
-}
-
-.review-content.scrollable~.review-indicator-container {
-  display: block;
-}
-
 .review-content p {
   font-size: 1.28rem;
   font-style: italic;
@@ -1401,32 +1389,6 @@ body.menu-open {
   box-shadow: none;
 }
 
-.back-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--secondary-bg);
-  color: white;
-  padding: 12px 24px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  margin-bottom: 40px;
-  margin-top: 20px;
-}
-
-.back-button:hover {
-  background: var(--secondary-text);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px var(--shadow-action);
-}
-
-.back-button::before {
-  content: '←';
-  font-size: 1.2rem;
-}
-
 /* Modal for image gallery */
 .modal {
   display: none;
@@ -1688,15 +1650,6 @@ body.menu-open {
   align-items: center;
   justify-content: center;
   min-height: 200px;
-}
-
-.loading-spinner {
-  color: var(--secondary-bg);
-  margin-bottom: 20px;
-}
-
-.loading-spinner .fa-spin {
-  animation: fa-spin 1s infinite linear;
 }
 
 @keyframes fa-spin {
@@ -2047,14 +2000,6 @@ body:not(:has(.hero-inner)) main>.section-inner:first-child .section-header {
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'HUNoodles';
-  src: url('./fonts/HUNoodles-Bold.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 @media (hover: hover) {
   button:hover {
     background-color: var(--secondary-bg);
@@ -2359,11 +2304,6 @@ body:not(:has(.hero-inner)) main>.section-inner:first-child .section-header {
     padding-inline: 18px;
   }
 
-  .review-indicator-container {
-    height: 28px;
-    margin-top: 3px;
-  }
-
   .review-author h3 {
     font-size: 1.25rem;
   }
@@ -2639,10 +2579,6 @@ body:not(:has(.hero-inner)) main>.section-inner:first-child .section-header {
   .review-content {
     max-height: 300px;
     padding-inline: 20px;
-  }
-
-  .review-indicator-container {
-    height: 26px;
   }
 
   .contacts-info,
