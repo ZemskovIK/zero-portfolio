@@ -573,8 +573,6 @@ body.menu-open {
 
 .page-link {
   display: block;
-  position: relative;
-  bottom: 40%;
   position: absolute;
   bottom: 40%;
   left: 0;
@@ -855,7 +853,9 @@ body.menu-open {
 }
 
 .review-form input,
-.review-form textarea {
+.review-form textarea,
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -866,18 +866,23 @@ body.menu-open {
 }
 
 .review-form input:focus,
-.review-form textarea:focus {
+.review-form textarea:focus,
+.contact-form input:focus,
+.contact-form textarea:focus {
   outline: none;
   border-color: var(--secondary-bg);
 }
 
 .review-form input[type='text'],
-.review-form textarea {
+.review-form textarea,
+.contact-form input[type='text'],
+.contact-form textarea {
   font-size: 20px !important;
   line-height: 1.4;
 }
 
-.review-form textarea {
+.review-form textarea,
+.contact-form textarea {
   resize: vertical;
   height: 150px;
 }
@@ -925,7 +930,8 @@ body.menu-open {
   min-height: 20px;
 }
 
-.review-form button {
+.review-form button,
+.contact-form button {
   background-color: var(--secondary-bg);
   color: white;
   border: none;
@@ -938,7 +944,8 @@ body.menu-open {
   transition: all 0.3s ease;
 }
 
-.review-form button:hover {
+.review-form button:hover,
+.contact-form button:hover {
   background-color: var(--secondary-text);
   transform: translateY(-3px);
 }
@@ -1105,51 +1112,6 @@ body.menu-open {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  font-size: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-family: inherit;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: var(--secondary-bg);
-}
-
-.contact-form input[type='text'],
-.contact-form textarea {
-  font-size: 20px !important;
-  line-height: 1.4;
-}
-
-.contact-form textarea {
-  height: 150px;
-  resize: vertical;
-}
-
-.contact-form button {
-  background-color: var(--secondary-bg);
-  color: white;
-  border: none;
-  padding: 1rem 2.25rem;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1.12rem;
-  transition: all 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: var(--secondary-text);
-  transform: translateY(-3px);
-}
-
 /* Projects Page */
 .projects-grid {
   display: grid;
@@ -1284,6 +1246,7 @@ body.menu-open {
 
 .project-hero-left h1 {
   display: block;
+  grid-column: 1 / -1;
   color: white;
   font-size: 2.5rem;
   font-weight: 600;
@@ -1294,10 +1257,6 @@ body.menu-open {
 
 .project-hero-left {
   display: contents;
-}
-
-.project-hero-left h1 {
-  grid-column: 1 / -1;
 }
 
 .project-hero-left .project-area {
@@ -1659,16 +1618,6 @@ body.menu-open {
 
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.5;
-  }
-
-  to {
-    opacity: 1;
   }
 }
 
