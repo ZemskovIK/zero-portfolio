@@ -1793,6 +1793,48 @@ body:not(:has(.hero-inner)) main>.section-inner:first-child .section-header {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 
+  .slideshow-container.container {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr) 88px;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .slideshow-container.container .slideshow-inner {
+    grid-column: 1 / -1;
+  }
+
+  .slideshow-container.container .prev,
+  .slideshow-container.container .next {
+    position: static;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    color: var(--secondary-bg);
+    font-size: 1.8rem;
+    line-height: 1;
+    transform: none;
+  }
+
+  .slideshow-container.container .prev {
+    grid-column: 1;
+    justify-self: end;
+  }
+
+  .slideshow-container.container .next {
+    grid-column: 3;
+    justify-self: start;
+  }
+
+  .slideshow-container.container .dots-container {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+  }
+
   .gallery-modal-content {
     max-width: 85%;
   }
