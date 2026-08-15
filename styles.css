@@ -1839,12 +1839,33 @@ body:not(:has(.hero-inner)) main>.section-inner:first-child .section-header {
     max-width: 85%;
   }
 
-  .gallery-modal-prev.large-image {
-    left: 0;
+  .gallery-modal-prev,
+  .gallery-modal-next,
+  .gallery-modal-prev.large-image,
+  .gallery-modal-next.large-image {
+    position: fixed;
+    top: auto;
+    bottom: 62px;
+    transform: none;
+    margin-top: 0;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-on-dark);
+    font-size: 1.9rem;
   }
 
+  .gallery-modal-prev,
+  .gallery-modal-prev.large-image {
+    left: calc(50% - 64px);
+  }
+
+  .gallery-modal-next,
   .gallery-modal-next.large-image {
-    right: 0;
+    right: calc(50% - 64px);
   }
 }
 
