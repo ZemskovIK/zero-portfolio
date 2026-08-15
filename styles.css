@@ -732,7 +732,7 @@ body:not(:has(.hero-inner)) main>.section-inner:first-child .section-header {
   justify-self: end;
   padding-top: 1px;
   white-space: nowrap;
-  color: #111;
+  color: var(--main-text);
   font-size: 1.35rem;
   line-height: 1.15;
   font-weight: 700;
